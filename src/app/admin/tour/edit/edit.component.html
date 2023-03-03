@@ -1,0 +1,39 @@
+
+<div class="container mt-3" style="width: 500px">
+  <h2>Edit form</h2>
+  <form [formGroup]="formEdit" (submit)="editTour()">
+    <input hidden formControlName="id" ><br>
+    <div class="mb-3 mt-3">
+      <label>Edit Name:</label>
+      <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mb-3 mt-3">
+      <label>Edit Image:</label>
+      <input type="text" class="form-control" placeholder="Enter Url" formControlName="image">
+    </div>
+    <div class="mb-3 mt-3">
+      <label>Edit Price:</label>
+      <input type="text" class="form-control" placeholder="Enter Price" formControlName="price">
+    </div>
+    <div class="mb-3 mt-3">
+      <label>Edit Status:</label>
+      <input type="text" class="form-control" placeholder="Enter Status" formControlName="status">
+    </div>
+    <div class="mb-3 mt-3">
+      <label>Edit dayStart</label>
+      <input type="text" class="form-control" placeholder="Enter dayStart" formControlName="dayStart">
+    </div>
+    <div class="mb-3 mt-3">
+      <label>Edit dayEnd</label>
+      <input type="text" class="form-control" placeholder="Enter dayEnd" formControlName="dayEnd">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label>Edit avgPoint</label>
+      <input type="text" class="form-control" placeholder="Enter avgPoint" formControlName="avgPoint">
+    </div>
+    <button class="btn btn-primary" routerLink="/admin">Back</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+

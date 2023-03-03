@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="">Home</a></li>
+      <li><a routerLink="/body">Travel</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="gtco-section">
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2>Most Popular Destination</h2>
+        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let t of tours; index as i">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+            <img src="{{t.image}}" width="300px" height="250px">
+          <div class="fh5co-text">
+            <h2>{{t.name}}</h2>
+            <p>{{t.description}}</p>
+            <p><span class="btn btn-primary">Schedule a Trip</span></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

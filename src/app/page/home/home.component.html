@@ -1,0 +1,71 @@
+
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+
+
+  <!-- <div class="page-inner"> -->
+  <nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div id="gtco-logo"><a routerLink="">Traveler <em>.</em></a></div>
+        </div>
+        <div class="col-xs-8 text-right menu-1">
+          <ul>
+            <li><a routerLink="" >Home</a></li>
+            <li class="has-dropdown">
+              <a routerLink="/body">Travel</a>
+            </li>
+            <li><a routerLink="/login">Login</a></li>
+            <li><a routerLink="/register">Register</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(https://i.pinimg.com/564x/ba/f5/93/baf59385d5bb8f727ff6a248d36d067e.jpg)" >
+    <div class="overlay"></div>
+    <div class="gtco-container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 text-left">
+
+
+          <div class="row row-mt-15em">
+            <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+              <h1>Planing Trip To Anywhere in The World?</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="gtco-section">
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2>Most Popular Destination</h2>
+        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let t of tours; index as i">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <img src="{{t.image}}" width="300px" height="250px">
+          <div class="fh5co-text">
+            <h2>{{t.name}}</h2>
+            <p>{{t.description}}</p>
+            <p><span class="btn btn-primary">Schedule a Trip</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

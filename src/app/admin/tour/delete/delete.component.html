@@ -1,0 +1,13 @@
+<div class="container mt-3" style="width: 500px">
+  <h2>Delete form</h2>
+  <form [formGroup]="formDelete" (submit)="deleteProduct()">
+    <input hidden formControlName="id" ><br>
+    <h4>Are you sure delete?</h4>
+    <div class="mb-3 mt-3">
+      <h4 formControlName="name"></h4>
+      <input type="text" readonly class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <button class="btn btn-primary" routerLink="/show">Back</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

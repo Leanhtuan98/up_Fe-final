@@ -1,0 +1,43 @@
+<div class="container-full" style="margin: 0px 150px">
+  <br>
+  <h2>Travel</h2>
+  <br>
+  <hr>
+  <button type="button" class="btn btn-primary" routerLink="/create">Create Hàng</button>
+  <br>
+  <hr>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>dayStart</th>
+      <th>dayEnd</th>
+      <th>avgPoint</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let t of tour">
+      <td>{{t.id}}</td>
+      <td>{{t.name}}</td>
+      <td><img src="{{t.image}}" width="220" height="300"></td>
+      <td>{{t.price}}</td>
+      <td>{{t.status}}</td>
+      <td>{{t.dayStart}}</td>
+      <td>{{t.dayEnd}}</td>
+      <td>{{t.avgPoint}}</td>
+      <td>
+        <button type="button" class="btn btn-warning" routerLink="/edit/{{t.id}}">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" routerLink="/delete/{{t.id}}">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
